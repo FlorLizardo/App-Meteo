@@ -25,7 +25,7 @@ const Home = () => {
   const myFetchWeather = async () => { //fetch dei dati del giorno
     try{
       const resp = await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=${search}&APPID=a829039625b8c3a5900bfd0863a4c234&lang=it&units=metric`
+        `https://api.openweathermap.org/data/2.5/weather?q=${search}&APPID=a829039625b8c3a5900bfd0863a4c234&lang=it&units=metric`
       );
       const data = await resp.json();
       dispatch(weather(data))

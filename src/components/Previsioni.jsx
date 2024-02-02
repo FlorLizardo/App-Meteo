@@ -22,7 +22,7 @@ const Previsioni = () => {
 	const myFetchForecast = async () => {
 		try {
 			const resp = await fetch(
-				`http://api.openweathermap.org/data/2.5/forecast?id=${weatherData.fetchWeather.id}&appid=a829039625b8c3a5900bfd0863a4c234&units=metric&lang=it`
+				`https://api.openweathermap.org/data/2.5/forecast?id=${weatherData.fetchWeather.id}&appid=a829039625b8c3a5900bfd0863a4c234&units=metric&lang=it`
 			);
 			const data = await resp.json(); //ricevo i dati della fetch
 			setDatiTotali(data.list); //assegno i dati a datiTotali
